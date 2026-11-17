@@ -1,0 +1,51 @@
+.reviews-admin__tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.reviews-admin__tabs button {
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-white);
+  font-size: 0.85rem;
+}
+
+.reviews-admin__tabs button.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.reviews-admin__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviews-admin__item {
+  padding: 18px 20px;
+}
+
+.reviews-admin__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reviews-admin__head p {
+  font-size: 0.8rem;
+}
+
+.reviews-admin__comment {
+  margin: 10px 0 14px;
+  font-style: italic;
+}
+
+.reviews-admin__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

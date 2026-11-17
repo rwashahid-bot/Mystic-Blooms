@@ -1,0 +1,42 @@
+.admin-layout {
+  min-height: 100vh;
+  background: #f8f4f6;
+}
+
+.admin-layout__main {
+  margin-left: 250px;
+  min-width: 0;
+}
+
+.admin-layout__content {
+  padding: 28px 24px 48px;
+  max-width: 1400px;
+}
+
+@media (max-width: 960px) {
+  .admin-layout__main {
+    margin-left: 0;
+  }
+
+  .admin-layout__content {
+    padding: 20px 16px 40px;
+  }
+}
+
+/* Print: only the printable area (invoice / packing slip) */
+@media print {
+  .admin-sidebar,
+  .admin-topbar,
+  .no-print {
+    display: none !important;
+  }
+
+  .admin-layout__main {
+    margin-left: 0;
+  }
+
+  .admin-layout,
+  body {
+    background: #fff;
+  }
+}

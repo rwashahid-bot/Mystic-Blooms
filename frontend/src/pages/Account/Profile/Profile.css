@@ -1,0 +1,10 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile__privacy {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}

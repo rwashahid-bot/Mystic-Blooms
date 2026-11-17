@@ -1,0 +1,45 @@
+.order-summary {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.order-summary h3 {
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+}
+
+.order-summary dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 0.92rem;
+}
+
+.order-summary dt {
+  color: var(--color-muted);
+}
+
+.order-summary__discount dd {
+  color: var(--color-success);
+}
+
+.order-summary__total {
+  margin-top: 8px;
+  padding-top: 14px !important;
+  border-top: 1px dashed var(--color-border);
+  font-size: 1.1rem !important;
+}
+
+.order-summary__total dt {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.order-summary__total dd {
+  font-weight: 700;
+  color: var(--color-primary);
+}

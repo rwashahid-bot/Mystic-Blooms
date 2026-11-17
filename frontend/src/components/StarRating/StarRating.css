@@ -1,0 +1,26 @@
+.star-rating {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--color-gold);
+}
+
+.star-rating--sm {
+  font-size: 0.8rem;
+}
+
+.star-rating--lg {
+  font-size: 1.4rem;
+}
+
+.star-rating button {
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  padding: 2px;
+  transition: transform var(--transition);
+}
+
+.star-rating button:hover {
+  transform: scale(1.15);
+}

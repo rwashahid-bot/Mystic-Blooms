@@ -1,0 +1,134 @@
+.inventory__tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+.inventory__tabs button {
+  padding: 9px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-white);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.inventory__tabs button.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.inventory__stock {
+  display: inline-block;
+  min-width: 36px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #e5f5ec;
+  color: var(--color-success);
+  font-weight: 600;
+  text-align: center;
+}
+
+.inventory__stock.is-low {
+  background: #fdf3df;
+  color: var(--color-warning);
+}
+
+.inventory__stock.is-out {
+  background: #fbe9e7;
+  color: var(--color-danger);
+}
+
+/* Toggle switch */
+.inventory__switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.inventory__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.inventory__switch span {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #d8cfd3;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.inventory__switch span::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-white);
+  transition: var(--transition);
+}
+
+.inventory__switch input:checked + span {
+  background: var(--color-success);
+}
+
+.inventory__switch input:checked + span::before {
+  transform: translateX(18px);
+}
+
+.inventory__switch input:focus-visible + span {
+  outline: 3px solid var(--color-primary-light);
+}
+
+.inventory__calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.inventory__day {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+}
+
+.inventory__day span {
+  color: var(--color-muted);
+}
+
+.inventory__day.is-busy {
+  background: #e6f0fa;
+}
+
+.inventory__day.is-full {
+  background: #fdf3df;
+  border-color: #f0d9a8;
+}
+
+.inventory__day.is-blocked {
+  background: #efecee;
+  text-decoration: line-through;
+}
+
+.inventory__adjust {
+  margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+  .inventory__calendar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,43 @@
+.addresses__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.addresses__head h2 {
+  font-size: 1.4rem;
+}
+
+.addresses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.addresses__card {
+  position: relative;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.addresses__card.is-default {
+  border-color: var(--color-primary-light);
+}
+
+.addresses__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.addresses__actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.addresses__save {
+  margin-top: 18px;
+}

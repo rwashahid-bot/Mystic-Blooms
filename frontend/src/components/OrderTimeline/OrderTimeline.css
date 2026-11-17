@@ -1,0 +1,122 @@
+.order-timeline__steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 24px;
+  counter-reset: step;
+}
+
+.order-timeline__steps::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.order-timeline__steps li {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.order-timeline__dot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.order-timeline__steps li.is-done .order-timeline__dot {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.order-timeline__steps li.is-current .order-timeline__dot {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 0 0 5px rgba(166, 77, 106, 0.15);
+}
+
+.order-timeline__label {
+  font-size: 0.76rem;
+  color: var(--color-muted);
+}
+
+.order-timeline__steps li.is-current .order-timeline__label {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.order-timeline__cancelled {
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: #fbe9e7;
+  color: var(--color-danger);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.order-timeline__history {
+  border-left: 2px solid var(--color-border);
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.order-timeline__history li {
+  position: relative;
+  font-size: 0.86rem;
+}
+
+.order-timeline__history li::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.order-timeline__history span {
+  margin-left: 10px;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+.order-timeline__history p {
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .order-timeline__label {
+    font-size: 0.62rem;
+  }
+  .order-timeline__dot {
+    width: 28px;
+    height: 28px;
+  }
+  .order-timeline__steps::before {
+    top: 13px;
+  }
+}

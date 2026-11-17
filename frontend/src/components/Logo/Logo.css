@@ -1,0 +1,45 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-primary);
+}
+
+.logo__badge {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.logo__text {
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.logo__img {
+  height: 44px;
+  width: auto;
+}
+
+.logo--sm .logo__badge {
+  width: 34px;
+  height: 34px;
+  font-size: 0.9rem;
+}
+.logo--sm .logo__text {
+  font-size: 1.35rem;
+}
+
+.logo--light {
+  color: var(--color-white);
+}

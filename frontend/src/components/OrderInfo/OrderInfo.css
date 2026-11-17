@@ -1,0 +1,90 @@
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-info__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.order-info__head h2 {
+  font-size: 1.5rem;
+}
+
+.order-info__badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.order-info__courier {
+  margin-top: 16px;
+  font-size: 0.88rem;
+}
+
+.order-info__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.order-info__side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-info__side .card p {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.order-info__items li {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.order-info__items li:last-child {
+  border-bottom: none;
+}
+
+.order-info__items li > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.order-info__items small {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+.order-info__pay {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.order-info__gift {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--color-blush);
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+}
+
+@media (max-width: 800px) {
+  .order-info__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

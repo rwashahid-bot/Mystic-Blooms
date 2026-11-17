@@ -1,0 +1,50 @@
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  padding-top: 22px;
+  overflow-x: auto;
+}
+
+.bar-chart__col {
+  flex: 1;
+  min-width: 26px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+
+.bar-chart__bar {
+  width: 100%;
+  max-width: 42px;
+  min-height: 2px;
+  border-radius: 6px 6px 2px 2px;
+  background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary));
+  transition: height 0.4s ease;
+}
+
+.bar-chart__col:hover .bar-chart__bar {
+  background: var(--color-primary-dark);
+}
+
+.bar-chart__value {
+  font-size: 0.62rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.bar-chart__label {
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.bar-chart__empty {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}

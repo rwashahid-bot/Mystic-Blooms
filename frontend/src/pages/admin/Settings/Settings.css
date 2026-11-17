@@ -1,0 +1,143 @@
+.settings__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.settings__wide {
+  grid-column: 1 / -1;
+}
+
+.settings__status {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.settings__status-opt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+
+.settings__status-opt input {
+  accent-color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.settings__status-opt small {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
+.settings__status-opt.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-blush);
+}
+
+.settings__label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.settings__inline {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.settings__inline .input {
+  padding: 8px 12px;
+}
+
+.settings__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.settings__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+}
+
+.settings__chip button {
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.settings__three {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 700px;
+}
+
+.settings .table .input {
+  padding: 7px 10px;
+  font-size: 0.86rem;
+}
+
+.settings__add {
+  margin: 12px 0 8px;
+}
+
+.settings__methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.settings__method {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.settings__method.is-off {
+  opacity: 0.6;
+}
+
+.settings__method .textarea {
+  min-height: 70px;
+  font-size: 0.85rem;
+}
+
+.settings__danger {
+  border-color: #f2c8c2;
+}
+
+.settings__danger p {
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 1000px) {
+  .settings__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .settings__status,
+  .settings__methods,
+  .settings__three {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,89 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contact__wa {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: #25d366;
+  color: var(--color-white);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
+  transition: transform var(--transition);
+}
+
+.contact__wa:hover {
+  transform: translateY(-2px);
+}
+
+.contact__wa svg {
+  font-size: 2.2rem;
+}
+
+.contact__wa div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__wa span {
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+.contact__list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.93rem;
+}
+
+.contact__list svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.contact__list a:hover {
+  color: var(--color-primary);
+}
+
+.contact__response {
+  margin-top: 18px;
+  font-size: 0.85rem;
+}
+
+.contact__hp {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.contact__sent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.contact__sent span {
+  font-size: 2.6rem;
+}
+
+@media (max-width: 860px) {
+  .contact__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

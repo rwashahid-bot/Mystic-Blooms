@@ -1,0 +1,16 @@
+.announcement {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.announcement__inner {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.announcement--alert {
+  background: var(--color-text);
+}

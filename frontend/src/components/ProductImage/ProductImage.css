@@ -1,0 +1,25 @@
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--color-blush);
+}
+
+.product-image.is-rounded {
+  border-radius: var(--radius);
+}
+
+.product-image--placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.9), transparent 55%),
+    linear-gradient(145deg, color-mix(in srgb, var(--flower) 18%, #fff), color-mix(in srgb, var(--flower) 38%, #fff));
+  overflow: hidden;
+}
+
+.product-image--placeholder svg {
+  width: 72%;
+  height: 72%;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
+}

@@ -1,0 +1,22 @@
+.audit-log__filters {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.audit-log__filters .input,
+.audit-log__filters .select {
+  padding: 9px 12px;
+}
+
+.audit-log__time {
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 560px) {
+  .audit-log__filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

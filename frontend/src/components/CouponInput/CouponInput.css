@@ -1,0 +1,27 @@
+.coupon {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.coupon .input {
+  padding: 9px 12px;
+  text-transform: uppercase;
+}
+
+.coupon--applied {
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: #e5f5ec;
+  color: var(--color-success);
+  font-size: 0.88rem;
+}
+
+.coupon--applied button {
+  margin-left: auto;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: 1rem;
+}

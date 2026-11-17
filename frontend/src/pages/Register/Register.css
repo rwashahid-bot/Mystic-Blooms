@@ -1,0 +1,15 @@
+.register-form__error {
+  margin-bottom: 12px;
+}
+
+.register-form__note {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.register-form__note a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}

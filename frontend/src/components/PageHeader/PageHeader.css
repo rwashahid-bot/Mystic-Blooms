@@ -1,0 +1,18 @@
+.page-header {
+  padding: 36px 0 32px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(244, 182, 200, 0.5), transparent 50%),
+    var(--color-blush);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-header h1 {
+  margin-top: 10px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+.page-header p {
+  margin-top: 6px;
+  max-width: 620px;
+  color: var(--color-muted);
+}

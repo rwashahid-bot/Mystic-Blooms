@@ -1,0 +1,11 @@
+.my-order-details__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.my-order-details__bar a {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}

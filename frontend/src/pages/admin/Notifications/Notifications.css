@@ -1,0 +1,81 @@
+.notifications__filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.notifications__filters button {
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-white);
+  font-size: 0.84rem;
+}
+
+.notifications__filters button.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.notifications__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notifications__item {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.notifications__item:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.notifications__item p {
+  font-size: 0.84rem;
+  color: var(--color-muted);
+}
+
+.notifications__item small {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.notifications__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--color-blush);
+  color: var(--color-primary);
+  font-size: 1.15rem;
+}
+
+.is-payment .notifications__icon { background: #fdf3df; color: var(--color-warning); }
+.is-enquiry .notifications__icon { background: #e6f0fa; color: var(--color-info); }
+.is-review .notifications__icon { background: #fff4d6; color: #b8860b; }
+.is-stock .notifications__icon,
+.is-capacity .notifications__icon { background: #fbe9e7; color: var(--color-danger); }
+
+@media (max-width: 560px) {
+  .notifications__item {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .notifications__item small {
+    grid-column: 2;
+  }
+}

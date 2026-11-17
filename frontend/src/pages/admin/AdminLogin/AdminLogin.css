@@ -1,0 +1,47 @@
+.admin-login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(166, 77, 106, 0.35), transparent 45%),
+    #2f1e27;
+}
+
+.admin-login__card {
+  width: 100%;
+  max-width: 400px;
+  padding: 36px 30px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.admin-login__card h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 4px;
+  font-size: 1.5rem;
+}
+
+.admin-login__card > p {
+  margin-bottom: 24px;
+  font-size: 0.88rem;
+}
+
+.admin-login__card .field-error {
+  margin-bottom: 12px;
+}
+
+.admin-login__demo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 20px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--color-blush);
+  font-size: 0.78rem;
+  color: var(--color-primary-dark);
+}

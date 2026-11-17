@@ -1,0 +1,66 @@
+.account-layout {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.account-layout__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.account-layout__nav a,
+.account-layout__nav button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  font-size: 0.92rem;
+  text-align: left;
+  color: var(--color-text);
+  transition: var(--transition);
+}
+
+.account-layout__nav a:hover,
+.account-layout__nav button:hover {
+  background: var(--color-blush);
+}
+
+.account-layout__nav a.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.account-layout__nav button {
+  color: var(--color-danger);
+}
+
+.account-layout__content {
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .account-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .account-layout__nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .account-layout__nav a,
+  .account-layout__nav button {
+    white-space: nowrap;
+  }
+}
